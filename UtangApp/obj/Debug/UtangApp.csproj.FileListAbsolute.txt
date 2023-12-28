@@ -1,0 +1,16 @@
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\bin\Debug\UtangApp.exe.config
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\bin\Debug\UtangApp.exe
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\bin\Debug\UtangApp.pdb
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\obj\Debug\UtangApp.csproj.AssemblyReference.cache
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\obj\Debug\UtangApp.AddPersonPage.resources
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\obj\Debug\UtangApp.AddProductPage.resources
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\obj\Debug\UtangApp.AddUtangPage.resources
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\obj\Debug\UtangApp.Homepage.resources
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\obj\Debug\UtangApp.PersonPage.resources
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\obj\Debug\UtangApp.Properties.Resources.resources
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\obj\Debug\UtangApp.csproj.GenerateResource.cache
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\obj\Debug\UtangApp.csproj.CoreCompileInputs.cache
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\obj\Debug\UtangApp.exe
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\obj\Debug\UtangApp.pdb
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\obj\Debug\UtangApp.EditPersonPage.resources
+C:\Users\Andrei\source\repos\UtangApp\UtangApp\obj\Debug\UtangApp.ComboBoxItem.resources

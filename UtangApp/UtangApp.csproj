@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54951D61-C97F-48C1-8616-CD511610DF72}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UtangApp</RootNamespace>
+    <AssemblyName>UtangApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddPersonPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPersonPage.Designer.cs">
+      <DependentUpon>AddPersonPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProductPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProductPage.Designer.cs">
+      <DependentUpon>AddProductPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUtangPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUtangPage.Designer.cs">
+      <DependentUpon>AddUtangPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database.cs" />
+    <Compile Include="EditPersonPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPersonPage.Designer.cs">
+      <DependentUpon>EditPersonPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditUtangPage.cs" />
+    <Compile Include="EditUtangPage.Designer.cs">
+      <DependentUpon>EditUtangPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonPage.Designer.cs">
+      <DependentUpon>PersonPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utang_dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Utang_dbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Validation.cs" />
+    <EmbeddedResource Include="AddPersonPage.resx">
+      <DependentUpon>AddPersonPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProductPage.resx">
+      <DependentUpon>AddProductPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUtangPage.resx">
+      <DependentUpon>AddUtangPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPersonPage.resx">
+      <DependentUpon>EditPersonPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditUtangPage.resx">
+      <DependentUpon>EditUtangPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage.resx">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonPage.resx">
+      <DependentUpon>PersonPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Utang_dbDataSet.xsc">
+      <DependentUpon>Utang_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Utang_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Utang_dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Utang_dbDataSet.xss">
+      <DependentUpon>Utang_dbDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
