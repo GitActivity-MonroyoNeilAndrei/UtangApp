@@ -110,6 +110,8 @@ namespace UtangApp
 				// Access the ID property
 				selectedId = selectedComboItem.Id;
 
+				Console.WriteLine(selectedId);
+
 			}
 		}
 
@@ -136,6 +138,10 @@ namespace UtangApp
 			if (dialogResult == DialogResult.Yes)
 			{
 				database.UpdateData($" product_id = '{selectedId}', quantity = {quantity_numericUpDown.Value}, date_loaned = '{date_dateTimePicker.Value}' ", $" utang_id = {utang_id} ", "utang");
+
+				database.addTotalPrice();
+
+				MessageBox.Show("Utang Edited Successfully!");
 			}
 		}
 	}

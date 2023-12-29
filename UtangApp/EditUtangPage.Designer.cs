@@ -136,6 +136,7 @@
 			this.product_comboBox.Name = "product_comboBox";
 			this.product_comboBox.Size = new System.Drawing.Size(229, 28);
 			this.product_comboBox.TabIndex = 12;
+			this.product_comboBox.SelectedIndexChanged += new System.EventHandler(this.product_comboBox_SelectedIndexChanged);
 			// 
 			// label4
 			// 

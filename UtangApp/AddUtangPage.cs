@@ -94,6 +94,8 @@ namespace UtangApp
 		{
 			database.InsertData("product_id, quantity, person_id, status, date_loaned", $"{selectedId}, {quantity_numericUpDown.Value}, {person_id}, 'unpaid', '{date_dateTimePicker.Value}' ", "utang");
 
+			database.addTotalPrice();
+
 			MessageBox.Show("Utang Added Successfully!");
 		}
 

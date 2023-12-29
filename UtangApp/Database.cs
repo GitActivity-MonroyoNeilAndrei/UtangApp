@@ -19,10 +19,26 @@ namespace UtangApp
 
 		private string connectionString;
 
-		public Database ()
+		public Database()
 		{
 			connectionString = "Data Source=DESKTOP-25623UD\\SQLEXPRESS;Initial Catalog=Utang_db;Integrated Security=True";
 		}
+
+		public void addTotalPrice()
+		{
+			using (SqlConnection connection = new SqlConnection(connectionString))
+			{
+				connection.Open();
+
+				string sql = "UPDATE utang SET total_price = utang.quantity * product.price FROM utang JOIN product ON utang.product_id = product.product_id;";
+
+				using (SqlCommand command = new SqlCommand(sql, connection))
+				{
+					command.ExecuteNonQuery();
+				}
+			}
+		}
+
 
 		public void ReadData(string query, DataGridView dataGridView)
 		{
