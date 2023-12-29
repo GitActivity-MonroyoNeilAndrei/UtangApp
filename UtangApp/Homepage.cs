@@ -23,9 +23,14 @@ namespace UtangApp
 			
 			database.ReadData("SELECT * FROM person", person_dataGridView);
 
-			person_dataGridView.Rows[0].Selected = true;
+			if (person_dataGridView.RowCount > 0)
+			{
+				person_dataGridView.Rows[0].Selected = true;
 
-			id = Convert.ToInt32(person_dataGridView.SelectedRows[0].Cells[0].Value);
+				id = Convert.ToInt32(person_dataGridView.SelectedRows[0].Cells[0].Value);
+			}
+
+			
 
 
 

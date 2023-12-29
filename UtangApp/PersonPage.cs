@@ -27,11 +27,17 @@ namespace UtangApp
 			this.person_id = id;
 
 			name_label.Text =  database.GetData("person_name", "person_id", person_id, "person");
-			database.ReadData($"SELECT utang.utang_id, product.product_name, utang.quantity, product.price, utang.date_loaned,  utang.status FROM utang JOIN product ON utang.product_id = product.product_id JOIN person ON utang.person_id = person.person_id WHERE person.person_id = {person_id} AND utang.status = '{paid}';", utang_dataGridView);
+			database.ReadData($"SELECT utang.utang_id, product.product_name, utang.quantity, product.price, utang.total_price,  utang.date_loaned FROM utang JOIN product ON utang.product_id = product.product_id JOIN person ON utang.person_id = person.person_id WHERE person.person_id = {person_id} AND utang.status = '{paid}';", utang_dataGridView);
 
-			utang_dataGridView.Rows[0].Selected = true;
+			if (utang_dataGridView.RowCount > 0)
+			{
+				utang_dataGridView.Rows[0].Selected = true;
+				this.utang_id = Convert.ToInt32(utang_dataGridView.SelectedRows[0].Cells[0].Value);
+			}
 
-			this.utang_id = Convert.ToInt32(utang_dataGridView.SelectedRows[0].Cells[0].Value);
+				
+
+			
 
 
 		}
@@ -57,7 +63,7 @@ namespace UtangApp
 				unpaid_btn.ForeColor = Color.FromArgb(255, 255, 255);
 			}
 
-			database.ReadData($"SELECT utang.utang_id, product.product_name, utang.quantity, product.price, utang.date_loaned,  utang.status FROM utang JOIN product ON utang.product_id = product.product_id JOIN person ON utang.person_id = person.person_id WHERE person.person_id = {person_id} AND utang.status = '{paid}';", utang_dataGridView);
+			database.ReadData($"SELECT utang.utang_id, product.product_name, utang.quantity, product.price, utang.total_price,  utang.date_loaned FROM utang JOIN product ON utang.product_id = product.product_id JOIN person ON utang.person_id = person.person_id WHERE person.person_id = {person_id} AND utang.status = '{paid}';", utang_dataGridView);
 		}
 
 		private void back_btn_Click(object sender, EventArgs e)
@@ -94,7 +100,7 @@ namespace UtangApp
 			{
 				database.UpdateData("status = 'paid'", $"utang_id = {utang_id}", "utang");
 
-				database.ReadData($"SELECT utang.utang_id, product.product_name, utang.quantity, product.price, utang.date_loaned,  utang.status FROM utang JOIN product ON utang.product_id = product.product_id JOIN person ON utang.person_id = person.person_id WHERE person.person_id = {person_id} AND utang.status = '{paid}';", utang_dataGridView);
+				database.ReadData($"SELECT utang.utang_id, product.product_name, utang.quantity, product.price, utang.total_price, utang.date_loaned FROM utang JOIN product ON utang.product_id = product.product_id JOIN person ON utang.person_id = person.person_id WHERE person.person_id = {person_id} AND utang.status = '{paid}';", utang_dataGridView);
 			}
 				
 		}
